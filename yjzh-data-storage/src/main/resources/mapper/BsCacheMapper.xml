@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.byzoro.yjzhdatastorage.dao.BsCacheMapper" >
+  <resultMap id="BaseResultMap" type="com.byzoro.yjzhdatastorage.pojo.BsCache" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="node_id" property="nodeId" jdbcType="VARCHAR" />
+    <result column="org_id" property="orgId" jdbcType="CHAR" />
+    <result column="subsys_id" property="subsysId" jdbcType="CHAR" />
+    <result column="intf_id" property="intfId" jdbcType="CHAR" />
+    <result column="query_cnt" property="queryCnt" jdbcType="BIGINT" />
+    <result column="suc_resp_cnt" property="sucRespCnt" jdbcType="BIGINT" />
+    <result column="resolve_avg_t" property="resolveAvgT" jdbcType="INTEGER" />
+    <result column="tld_list" property="tldList" jdbcType="CHAR" />
+    <result column="a_query_cnt" property="aQueryCnt" jdbcType="BIGINT" />
+    <result column="aaaa_query_cnt" property="aaaaQueryCnt" jdbcType="BIGINT" />
+    <result column="stat_period" property="statPeriod" jdbcType="VARCHAR" />
+    <result column="time_stamp" property="timeStamp" jdbcType="TIMESTAMP" />
+    <result column="data_tag" property="dataTag" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, node_id, org_id, subsys_id, intf_id, query_cnt, suc_resp_cnt, resolve_avg_t, 
+    tld_list, a_query_cnt, aaaa_query_cnt, stat_period, time_stamp, data_tag
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from bs_cache
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from bs_cache
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.byzoro.yjzhdatastorage.pojo.BsCache" >
+    insert into bs_cache (id, node_id, org_id, 
+      subsys_id, intf_id, query_cnt, 
+      suc_resp_cnt, resolve_avg_t, tld_list, 
+      a_query_cnt, aaaa_query_cnt, stat_period, 
+      time_stamp, data_tag)
+    values (#{id,jdbcType=INTEGER}, #{nodeId,jdbcType=VARCHAR}, #{orgId,jdbcType=CHAR}, 
+      #{subsysId,jdbcType=CHAR}, #{intfId,jdbcType=CHAR}, #{queryCnt,jdbcType=BIGINT}, 
+      #{sucRespCnt,jdbcType=BIGINT}, #{resolveAvgT,jdbcType=INTEGER}, #{tldList,jdbcType=CHAR}, 
+      #{aQueryCnt,jdbcType=BIGINT}, #{aaaaQueryCnt,jdbcType=BIGINT}, #{statPeriod,jdbcType=VARCHAR}, 
+      #{timeStamp,jdbcType=TIMESTAMP}, #{dataTag,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.byzoro.yjzhdatastorage.pojo.BsCache" >
+    insert into bs_cache
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="nodeId != null" >
+        node_id,
+      </if>
+      <if test="orgId != null" >
+        org_id,
+      </if>
+      <if test="subsysId != null" >
+        subsys_id,
+      </if>
+      <if test="intfId != null" >
+        intf_id,
+      </if>
+      <if test="queryCnt != null" >
+        query_cnt,
+      </if>
+      <if test="sucRespCnt != null" >
+        suc_resp_cnt,
+      </if>
+      <if test="resolveAvgT != null" >
+        resolve_avg_t,
+      </if>
+      <if test="tldList != null" >
+        tld_list,
+      </if>
+      <if test="aQueryCnt != null" >
+        a_query_cnt,
+      </if>
+      <if test="aaaaQueryCnt != null" >
+        aaaa_query_cnt,
+      </if>
+      <if test="statPeriod != null" >
+        stat_period,
+      </if>
+      <if test="timeStamp != null" >
+        time_stamp,
+      </if>
+      <if test="dataTag != null" >
+        data_tag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="nodeId != null" >
+        #{nodeId,jdbcType=VARCHAR},
+      </if>
+      <if test="orgId != null" >
+        #{orgId,jdbcType=CHAR},
+      </if>
+      <if test="subsysId != null" >
+        #{subsysId,jdbcType=CHAR},
+      </if>
+      <if test="intfId != null" >
+        #{intfId,jdbcType=CHAR},
+      </if>
+      <if test="queryCnt != null" >
+        #{queryCnt,jdbcType=BIGINT},
+      </if>
+      <if test="sucRespCnt != null" >
+        #{sucRespCnt,jdbcType=BIGINT},
+      </if>
+      <if test="resolveAvgT != null" >
+        #{resolveAvgT,jdbcType=INTEGER},
+      </if>
+      <if test="tldList != null" >
+        #{tldList,jdbcType=CHAR},
+      </if>
+      <if test="aQueryCnt != null" >
+        #{aQueryCnt,jdbcType=BIGINT},
+      </if>
+      <if test="aaaaQueryCnt != null" >
+        #{aaaaQueryCnt,jdbcType=BIGINT},
+      </if>
+      <if test="statPeriod != null" >
+        #{statPeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="timeStamp != null" >
+        #{timeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dataTag != null" >
+        #{dataTag,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.byzoro.yjzhdatastorage.pojo.BsCache" >
+    update bs_cache
+    <set >
+      <if test="nodeId != null" >
+        node_id = #{nodeId,jdbcType=VARCHAR},
+      </if>
+      <if test="orgId != null" >
+        org_id = #{orgId,jdbcType=CHAR},
+      </if>
+      <if test="subsysId != null" >
+        subsys_id = #{subsysId,jdbcType=CHAR},
+      </if>
+      <if test="intfId != null" >
+        intf_id = #{intfId,jdbcType=CHAR},
+      </if>
+      <if test="queryCnt != null" >
+        query_cnt = #{queryCnt,jdbcType=BIGINT},
+      </if>
+      <if test="sucRespCnt != null" >
+        suc_resp_cnt = #{sucRespCnt,jdbcType=BIGINT},
+      </if>
+      <if test="resolveAvgT != null" >
+        resolve_avg_t = #{resolveAvgT,jdbcType=INTEGER},
+      </if>
+      <if test="tldList != null" >
+        tld_list = #{tldList,jdbcType=CHAR},
+      </if>
+      <if test="aQueryCnt != null" >
+        a_query_cnt = #{aQueryCnt,jdbcType=BIGINT},
+      </if>
+      <if test="aaaaQueryCnt != null" >
+        aaaa_query_cnt = #{aaaaQueryCnt,jdbcType=BIGINT},
+      </if>
+      <if test="statPeriod != null" >
+        stat_period = #{statPeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="timeStamp != null" >
+        time_stamp = #{timeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dataTag != null" >
+        data_tag = #{dataTag,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.byzoro.yjzhdatastorage.pojo.BsCache" >
+    update bs_cache
+    set node_id = #{nodeId,jdbcType=VARCHAR},
+      org_id = #{orgId,jdbcType=CHAR},
+      subsys_id = #{subsysId,jdbcType=CHAR},
+      intf_id = #{intfId,jdbcType=CHAR},
+      query_cnt = #{queryCnt,jdbcType=BIGINT},
+      suc_resp_cnt = #{sucRespCnt,jdbcType=BIGINT},
+      resolve_avg_t = #{resolveAvgT,jdbcType=INTEGER},
+      tld_list = #{tldList,jdbcType=CHAR},
+      a_query_cnt = #{aQueryCnt,jdbcType=BIGINT},
+      aaaa_query_cnt = #{aaaaQueryCnt,jdbcType=BIGINT},
+      stat_period = #{statPeriod,jdbcType=VARCHAR},
+      time_stamp = #{timeStamp,jdbcType=TIMESTAMP},
+      data_tag = #{dataTag,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <insert id="insertData">
+    insert into bs_cache (node_id, org_id,
+      subsys_id, intf_id, query_cnt,
+      suc_resp_cnt, resolve_avg_t, tld_list,
+      a_query_cnt, aaaa_query_cnt, stat_period,
+      time_stamp, data_tag)
+    values (#{jsonResolve.nodeId,jdbcType=VARCHAR}, #{jsonData.orgId,jdbcType=CHAR},
+      #{jsonData.subsysId,jdbcType=CHAR}, #{jsonData.intfId,jdbcType=CHAR}, #{jsonResolve.queryCnt,jdbcType=BIGINT},
+      #{jsonResolve.sucRespCnt,jdbcType=BIGINT}, #{jsonResolve.resolveAvgT,jdbcType=INTEGER}, #{jsonResolve.tldListString,jdbcType=CHAR},
+      #{jsonResolve.aQueryCnt,jdbcType=BIGINT}, #{jsonResolve.aaaaQueryCnt,jdbcType=BIGINT}, #{jsonResolve.statPeriod,jdbcType=VARCHAR},
+      #{jsonResolve.date,jdbcType=TIMESTAMP}, #{jsonData.dataTag,jdbcType=CHAR})
+  </insert>
+
+</mapper>

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.byzoro.yjzhdatastorage.dao.BsDomainWarningMapper" >
+  <resultMap id="BaseResultMap" type="com.byzoro.yjzhdatastorage.pojo.BsDomainWarning" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="org_id" property="orgId" jdbcType="CHAR" />
+    <result column="subsys_id" property="subsysId" jdbcType="CHAR" />
+    <result column="intf_id" property="intfId" jdbcType="CHAR" />
+    <result column="alert_uuid" property="alertUuid" jdbcType="VARCHAR" />
+    <result column="alert_domain" property="alertDomain" jdbcType="VARCHAR" />
+    <result column="domain_type" property="domainType" jdbcType="CHAR" />
+    <result column="alert_operate" property="alertOperate" jdbcType="CHAR" />
+    <result column="alert_ttl" property="alertTtl" jdbcType="VARCHAR" />
+    <result column="alert_tag" property="alertTag" jdbcType="CHAR" />
+    <result column="domain_tag" property="domainTag" jdbcType="CHAR" />
+    <result column="alert_tatus" property="alertTatus" jdbcType="CHAR" />
+    <result column="alert_time" property="alertTime" jdbcType="TIMESTAMP" />
+    <result column="alert_info" property="alertInfo" jdbcType="CHAR" />
+    <result column="stat_period" property="statPeriod" jdbcType="VARCHAR" />
+    <result column="time_stamp" property="timeStamp" jdbcType="TIMESTAMP" />
+    <result column="data_pag" property="dataPag" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, org_id, subsys_id, intf_id, alert_uuid, alert_domain, domain_type, alert_operate, 
+    alert_ttl, alert_tag, domain_tag, alert_tatus, alert_time, alert_info, stat_period, 
+    time_stamp, data_pag
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from bs_domain_warning
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from bs_domain_warning
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.byzoro.yjzhdatastorage.pojo.BsDomainWarning" >
+    insert into bs_domain_warning (id, org_id, subsys_id, 
+      intf_id, alert_uuid, alert_domain, 
+      domain_type, alert_operate, alert_ttl, 
+      alert_tag, domain_tag, alert_tatus, 
+      alert_time, alert_info, stat_period, 
+      time_stamp, data_pag)
+    values (#{id,jdbcType=INTEGER}, #{orgId,jdbcType=CHAR}, #{subsysId,jdbcType=CHAR}, 
+      #{intfId,jdbcType=CHAR}, #{alertUuid,jdbcType=VARCHAR}, #{alertDomain,jdbcType=VARCHAR}, 
+      #{domainType,jdbcType=CHAR}, #{alertOperate,jdbcType=CHAR}, #{alertTtl,jdbcType=VARCHAR}, 
+      #{alertTag,jdbcType=CHAR}, #{domainTag,jdbcType=CHAR}, #{alertTatus,jdbcType=CHAR}, 
+      #{alertTime,jdbcType=TIMESTAMP}, #{alertInfo,jdbcType=CHAR}, #{statPeriod,jdbcType=VARCHAR}, 
+      #{timeStamp,jdbcType=TIMESTAMP}, #{dataPag,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.byzoro.yjzhdatastorage.pojo.BsDomainWarning" >
+    insert into bs_domain_warning
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="orgId != null" >
+        org_id,
+      </if>
+      <if test="subsysId != null" >
+        subsys_id,
+      </if>
+      <if test="intfId != null" >
+        intf_id,
+      </if>
+      <if test="alertUuid != null" >
+        alert_uuid,
+      </if>
+      <if test="alertDomain != null" >
+        alert_domain,
+      </if>
+      <if test="domainType != null" >
+        domain_type,
+      </if>
+      <if test="alertOperate != null" >
+        alert_operate,
+      </if>
+      <if test="alertTtl != null" >
+        alert_ttl,
+      </if>
+      <if test="alertTag != null" >
+        alert_tag,
+      </if>
+      <if test="domainTag != null" >
+        domain_tag,
+      </if>
+      <if test="alertTatus != null" >
+        alert_tatus,
+      </if>
+      <if test="alertTime != null" >
+        alert_time,
+      </if>
+      <if test="alertInfo != null" >
+        alert_info,
+      </if>
+      <if test="statPeriod != null" >
+        stat_period,
+      </if>
+      <if test="timeStamp != null" >
+        time_stamp,
+      </if>
+      <if test="dataPag != null" >
+        data_pag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="orgId != null" >
+        #{orgId,jdbcType=CHAR},
+      </if>
+      <if test="subsysId != null" >
+        #{subsysId,jdbcType=CHAR},
+      </if>
+      <if test="intfId != null" >
+        #{intfId,jdbcType=CHAR},
+      </if>
+      <if test="alertUuid != null" >
+        #{alertUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="alertDomain != null" >
+        #{alertDomain,jdbcType=VARCHAR},
+      </if>
+      <if test="domainType != null" >
+        #{domainType,jdbcType=CHAR},
+      </if>
+      <if test="alertOperate != null" >
+        #{alertOperate,jdbcType=CHAR},
+      </if>
+      <if test="alertTtl != null" >
+        #{alertTtl,jdbcType=VARCHAR},
+      </if>
+      <if test="alertTag != null" >
+        #{alertTag,jdbcType=CHAR},
+      </if>
+      <if test="domainTag != null" >
+        #{domainTag,jdbcType=CHAR},
+      </if>
+      <if test="alertTatus != null" >
+        #{alertTatus,jdbcType=CHAR},
+      </if>
+      <if test="alertTime != null" >
+        #{alertTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="alertInfo != null" >
+        #{alertInfo,jdbcType=CHAR},
+      </if>
+      <if test="statPeriod != null" >
+        #{statPeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="timeStamp != null" >
+        #{timeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dataPag != null" >
+        #{dataPag,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.byzoro.yjzhdatastorage.pojo.BsDomainWarning" >
+    update bs_domain_warning
+    <set >
+      <if test="orgId != null" >
+        org_id = #{orgId,jdbcType=CHAR},
+      </if>
+      <if test="subsysId != null" >
+        subsys_id = #{subsysId,jdbcType=CHAR},
+      </if>
+      <if test="intfId != null" >
+        intf_id = #{intfId,jdbcType=CHAR},
+      </if>
+      <if test="alertUuid != null" >
+        alert_uuid = #{alertUuid,jdbcType=VARCHAR},
+      </if>
+      <if test="alertDomain != null" >
+        alert_domain = #{alertDomain,jdbcType=VARCHAR},
+      </if>
+      <if test="domainType != null" >
+        domain_type = #{domainType,jdbcType=CHAR},
+      </if>
+      <if test="alertOperate != null" >
+        alert_operate = #{alertOperate,jdbcType=CHAR},
+      </if>
+      <if test="alertTtl != null" >
+        alert_ttl = #{alertTtl,jdbcType=VARCHAR},
+      </if>
+      <if test="alertTag != null" >
+        alert_tag = #{alertTag,jdbcType=CHAR},
+      </if>
+      <if test="domainTag != null" >
+        domain_tag = #{domainTag,jdbcType=CHAR},
+      </if>
+      <if test="alertTatus != null" >
+        alert_tatus = #{alertTatus,jdbcType=CHAR},
+      </if>
+      <if test="alertTime != null" >
+        alert_time = #{alertTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="alertInfo != null" >
+        alert_info = #{alertInfo,jdbcType=CHAR},
+      </if>
+      <if test="statPeriod != null" >
+        stat_period = #{statPeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="timeStamp != null" >
+        time_stamp = #{timeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dataPag != null" >
+        data_pag = #{dataPag,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.byzoro.yjzhdatastorage.pojo.BsDomainWarning" >
+    update bs_domain_warning
+    set org_id = #{orgId,jdbcType=CHAR},
+      subsys_id = #{subsysId,jdbcType=CHAR},
+      intf_id = #{intfId,jdbcType=CHAR},
+      alert_uuid = #{alertUuid,jdbcType=VARCHAR},
+      alert_domain = #{alertDomain,jdbcType=VARCHAR},
+      domain_type = #{domainType,jdbcType=CHAR},
+      alert_operate = #{alertOperate,jdbcType=CHAR},
+      alert_ttl = #{alertTtl,jdbcType=VARCHAR},
+      alert_tag = #{alertTag,jdbcType=CHAR},
+      domain_tag = #{domainTag,jdbcType=CHAR},
+      alert_tatus = #{alertTatus,jdbcType=CHAR},
+      alert_time = #{alertTime,jdbcType=TIMESTAMP},
+      alert_info = #{alertInfo,jdbcType=CHAR},
+      stat_period = #{statPeriod,jdbcType=VARCHAR},
+      time_stamp = #{timeStamp,jdbcType=TIMESTAMP},
+      data_pag = #{dataPag,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

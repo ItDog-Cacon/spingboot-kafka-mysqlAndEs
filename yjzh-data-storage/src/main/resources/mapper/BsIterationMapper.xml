@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.byzoro.yjzhdatastorage.dao.BsIterationMapper" >
+  <resultMap id="BaseResultMap" type="com.byzoro.yjzhdatastorage.pojo.BsIteration" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="node_id" property="nodeId" jdbcType="VARCHAR" />
+    <result column="org_id" property="orgId" jdbcType="CHAR" />
+    <result column="subsys_id" property="subsysId" jdbcType="CHAR" />
+    <result column="intf_id" property="intfId" jdbcType="CHAR" />
+    <result column="root_list" property="rootList" jdbcType="CHAR" />
+    <result column="rcopy_r_cnt" property="rcopyRCnt" jdbcType="BIGINT" />
+    <result column="rcopy_r_avg_t" property="rcopyRAvgT" jdbcType="BIGINT" />
+    <result column="tld_list" property="tldList" jdbcType="CHAR" />
+    <result column="stat_period" property="statPeriod" jdbcType="VARCHAR" />
+    <result column="time_stamp" property="timeStamp" jdbcType="TIMESTAMP" />
+    <result column="data_tag" property="dataTag" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, node_id, org_id, subsys_id, intf_id, root_list, rcopy_r_cnt, rcopy_r_avg_t, tld_list, 
+    stat_period, time_stamp, data_tag
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from bs_iteration
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from bs_iteration
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.byzoro.yjzhdatastorage.pojo.BsIteration" >
+    insert into bs_iteration (id, node_id, org_id, 
+      subsys_id, intf_id, root_list, 
+      rcopy_r_cnt, rcopy_r_avg_t, tld_list, 
+      stat_period, time_stamp, data_tag
+      )
+    values (#{id,jdbcType=INTEGER}, #{nodeId,jdbcType=VARCHAR}, #{orgId,jdbcType=CHAR}, 
+      #{subsysId,jdbcType=CHAR}, #{intfId,jdbcType=CHAR}, #{rootList,jdbcType=CHAR}, 
+      #{rcopyRCnt,jdbcType=BIGINT}, #{rcopyRAvgT,jdbcType=BIGINT}, #{tldList,jdbcType=CHAR}, 
+      #{statPeriod,jdbcType=VARCHAR}, #{timeStamp,jdbcType=TIMESTAMP}, #{dataTag,jdbcType=CHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.byzoro.yjzhdatastorage.pojo.BsIteration" >
+    insert into bs_iteration
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="nodeId != null" >
+        node_id,
+      </if>
+      <if test="orgId != null" >
+        org_id,
+      </if>
+      <if test="subsysId != null" >
+        subsys_id,
+      </if>
+      <if test="intfId != null" >
+        intf_id,
+      </if>
+      <if test="rootList != null" >
+        root_list,
+      </if>
+      <if test="rcopyRCnt != null" >
+        rcopy_r_cnt,
+      </if>
+      <if test="rcopyRAvgT != null" >
+        rcopy_r_avg_t,
+      </if>
+      <if test="tldList != null" >
+        tld_list,
+      </if>
+      <if test="statPeriod != null" >
+        stat_period,
+      </if>
+      <if test="timeStamp != null" >
+        time_stamp,
+      </if>
+      <if test="dataTag != null" >
+        data_tag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="nodeId != null" >
+        #{nodeId,jdbcType=VARCHAR},
+      </if>
+      <if test="orgId != null" >
+        #{orgId,jdbcType=CHAR},
+      </if>
+      <if test="subsysId != null" >
+        #{subsysId,jdbcType=CHAR},
+      </if>
+      <if test="intfId != null" >
+        #{intfId,jdbcType=CHAR},
+      </if>
+      <if test="rootList != null" >
+        #{rootList,jdbcType=CHAR},
+      </if>
+      <if test="rcopyRCnt != null" >
+        #{rcopyRCnt,jdbcType=BIGINT},
+      </if>
+      <if test="rcopyRAvgT != null" >
+        #{rcopyRAvgT,jdbcType=BIGINT},
+      </if>
+      <if test="tldList != null" >
+        #{tldList,jdbcType=CHAR},
+      </if>
+      <if test="statPeriod != null" >
+        #{statPeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="timeStamp != null" >
+        #{timeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dataTag != null" >
+        #{dataTag,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.byzoro.yjzhdatastorage.pojo.BsIteration" >
+    update bs_iteration
+    <set >
+      <if test="nodeId != null" >
+        node_id = #{nodeId,jdbcType=VARCHAR},
+      </if>
+      <if test="orgId != null" >
+        org_id = #{orgId,jdbcType=CHAR},
+      </if>
+      <if test="subsysId != null" >
+        subsys_id = #{subsysId,jdbcType=CHAR},
+      </if>
+      <if test="intfId != null" >
+        intf_id = #{intfId,jdbcType=CHAR},
+      </if>
+      <if test="rootList != null" >
+        root_list = #{rootList,jdbcType=CHAR},
+      </if>
+      <if test="rcopyRCnt != null" >
+        rcopy_r_cnt = #{rcopyRCnt,jdbcType=BIGINT},
+      </if>
+      <if test="rcopyRAvgT != null" >
+        rcopy_r_avg_t = #{rcopyRAvgT,jdbcType=BIGINT},
+      </if>
+      <if test="tldList != null" >
+        tld_list = #{tldList,jdbcType=CHAR},
+      </if>
+      <if test="statPeriod != null" >
+        stat_period = #{statPeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="timeStamp != null" >
+        time_stamp = #{timeStamp,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dataTag != null" >
+        data_tag = #{dataTag,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.byzoro.yjzhdatastorage.pojo.BsIteration" >
+    update bs_iteration
+    set node_id = #{nodeId,jdbcType=VARCHAR},
+      org_id = #{orgId,jdbcType=CHAR},
+      subsys_id = #{subsysId,jdbcType=CHAR},
+      intf_id = #{intfId,jdbcType=CHAR},
+      root_list = #{rootList,jdbcType=CHAR},
+      rcopy_r_cnt = #{rcopyRCnt,jdbcType=BIGINT},
+      rcopy_r_avg_t = #{rcopyRAvgT,jdbcType=BIGINT},
+      tld_list = #{tldList,jdbcType=CHAR},
+      stat_period = #{statPeriod,jdbcType=VARCHAR},
+      time_stamp = #{timeStamp,jdbcType=TIMESTAMP},
+      data_tag = #{dataTag,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <insert id="insertData">
+    insert into bs_iteration (node_id, org_id,
+      subsys_id, intf_id, root_list,
+      rcopy_r_cnt, rcopy_r_avg_t, tld_list,
+      stat_period, time_stamp, data_tag
+      )
+    values (#{jsonResolve.nodeId,jdbcType=VARCHAR}, #{jsonData.orgId,jdbcType=CHAR},
+      #{jsonData.subsysId,jdbcType=CHAR}, #{jsonData.intfId,jdbcType=CHAR}, #{jsonResolve.rootListString,jdbcType=CHAR},
+      #{jsonResolve.rcopyRCnt,jdbcType=BIGINT}, #{jsonResolve.rcopyRAvgT,jdbcType=BIGINT}, #{jsonResolve.tldListString,jdbcType=CHAR},
+      #{jsonResolve.statPeriod,jdbcType=VARCHAR}, #{jsonResolve.date,jdbcType=TIMESTAMP}, #{jsonData.dataTag,jdbcType=CHAR}
+      )
+  </insert>
+</mapper>

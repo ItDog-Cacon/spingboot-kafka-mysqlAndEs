@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.byzoro.yjzhdatastorage.dao.BsEmergencyNodeMapper" >
+  <resultMap id="BaseResultMap" type="com.byzoro.yjzhdatastorage.pojo.BsEmergencyNode" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="node_id" property="nodeId" jdbcType="VARCHAR" />
+    <result column="org_id" property="orgId" jdbcType="CHAR" />
+    <result column="subsys_id" property="subsysId" jdbcType="CHAR" />
+    <result column="intf_id" property="intfId" jdbcType="CHAR" />
+    <result column="query_cnt" property="queryCnt" jdbcType="BIGINT" />
+    <result column="suc_resp_cnt" property="sucRespCnt" jdbcType="BIGINT" />
+    <result column="resolve_avg_t" property="resolveAvgT" jdbcType="INTEGER" />
+    <result column="res_stat" property="resStat" jdbcType="CHAR" />
+    <result column="stat_period" property="statPeriod" jdbcType="VARCHAR" />
+    <result column="time_stamp" property="timeStamp" jdbcType="TIMESTAMP" />
+    <result column="data_tag" property="dataTag" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, node_id, org_id, subsys_id, intf_id, query_cnt, suc_resp_cnt, resolve_avg_t, 
+    res_stat, stat_period, time_stamp, data_tag
+  </sql>
+
+  <insert id="insertData" >
+    insert into bs_emergency_node (node_id, org_id,
+      subsys_id, intf_id, query_cnt,
+      suc_resp_cnt, resolve_avg_t, res_stat,
+      stat_period, time_stamp, data_tag
+      )
+    values (#{jsonResolve.nodeId,jdbcType=VARCHAR}, #{jsonData.orgId,jdbcType=CHAR},
+      #{jsonData.subsysId,jdbcType=CHAR}, #{jsonData.intfId,jdbcType=CHAR}, #{jsonResolve.queryCnt,jdbcType=BIGINT},
+      #{jsonResolve.sucRespCnt,jdbcType=BIGINT}, #{jsonResolve.resolveAvgT,jdbcType=INTEGER}, #{jsonResolve.resStatString,jdbcType=CHAR},
+      #{jsonResolve.statPeriod,jdbcType=VARCHAR}, #{jsonResolve.date,jdbcType=TIMESTAMP}, #{jsonData.dataTag,jdbcType=CHAR}
+      )
+  </insert>
+
+</mapper>

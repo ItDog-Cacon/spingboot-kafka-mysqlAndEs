@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.byzoro.yjzhdatastorage.dao.BsNodeStatusMapper" >
+  <resultMap id="BaseResultMap" type="com.byzoro.yjzhdatastorage.pojo.BsNodeStatus" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="node_id" property="nodeId" jdbcType="VARCHAR" />
+    <result column="org_id" property="orgId" jdbcType="CHAR" />
+    <result column="subsys_id" property="subsysId" jdbcType="CHAR" />
+    <result column="intf_id" property="intfId" jdbcType="CHAR" />
+    <result column="city_id" property="cityId" jdbcType="VARCHAR" />
+    <result column="server_num" property="serverNum" jdbcType="INTEGER" />
+    <result column="node_status" property="nodeStatus" jdbcType="VARCHAR" />
+    <result column="status_msg" property="statusMsg" jdbcType="VARCHAR" />
+    <result column="node_qps" property="nodeQps" jdbcType="VARCHAR" />
+    <result column="payload_rate" property="payloadRate" jdbcType="DOUBLE" />
+    <result column="stat_period" property="statPeriod" jdbcType="VARCHAR" />
+    <result column="time_stamp" property="timeStamp" jdbcType="TIMESTAMP" />
+    <result column="data_tag" property="dataTag" jdbcType="CHAR" />
+  </resultMap>
+
+  <insert id="insertData">
+      insert into bs_node_status (node_id, org_id,
+      subsys_id, intf_id, city_id,
+      server_num, node_status, status_msg,
+      node_qps, payload_rate, stat_period,
+      time_stamp, data_tag)
+      values (#{jsonResolve.nodeId,jdbcType=VARCHAR}, #{jsonData.orgId,jdbcType=CHAR},
+        #{jsonData.subsysId,jdbcType=CHAR}, #{jsonData.intfId,jdbcType=CHAR}, #{jsonResolve.cityId,jdbcType=VARCHAR},
+        #{jsonResolve.serverNum,jdbcType=INTEGER}, #{jsonResolve.nodeStatus,jdbcType=VARCHAR}, #{jsonResolve.statusMsg,jdbcType=VARCHAR},
+        #{jsonResolve.nodeQps,jdbcType=VARCHAR}, #{jsonResolve.payloadRate,jdbcType=DOUBLE}, #{jsonResolve.statPeriod,jdbcType=VARCHAR},
+        #{jsonResolve.date,jdbcType=TIMESTAMP}, #{jsonData.dataTag,jdbcType=CHAR})
+  </insert>
+</mapper>
