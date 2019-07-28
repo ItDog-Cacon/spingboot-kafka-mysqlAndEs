@@ -3,7 +3,6 @@ package com.byzoro.yjzhdatastorage.util;
 import com.byzoro.yjzhdatastorage.entity.Config;
 import com.byzoro.yjzhdatastorage.service.esImpl.EsDataImpl;
 import com.byzoro.yjzhdatastorage.service.impl.ComsumerServiceImpl;
-import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.IntegerDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -45,8 +44,8 @@ public class BatchListener {
         return props;
     }
 
-    @Bean("batchContainerFactory")
-    public ConcurrentKafkaListenerContainerFactory listenerContainer() {
+    @Bean("batchContainerFactory1")
+    public ConcurrentKafkaListenerContainerFactory listenerContainer1() {
         ConcurrentKafkaListenerContainerFactory container = new ConcurrentKafkaListenerContainerFactory();
         container.setConsumerFactory(new DefaultKafkaConsumerFactory(consumerProps()));
         //设置并发量，小于或等于Topic的分区数
@@ -54,6 +53,16 @@ public class BatchListener {
             System.out.println("Sql database not ready, kafka listener waiting... ...");
             container.setAutoStartup(false);
         }
+        container.setConcurrency(config.getBatchConsumer());
+        //设置为批量监听
+        container.setBatchListener(true);
+        return container;
+    }
+    @Bean("batchContainerFactory2")
+    public ConcurrentKafkaListenerContainerFactory listenerContainer2() {
+        ConcurrentKafkaListenerContainerFactory container = new ConcurrentKafkaListenerContainerFactory();
+        container.setConsumerFactory(new DefaultKafkaConsumerFactory(consumerProps()));
+        //设置并发量，小于或等于Topic的分区数
         if(!config.getEsEnable().equalsIgnoreCase("1")){
             System.out.println("Es database not ready, kafka listener waiting... ...");
             container.setAutoStartup(false);
@@ -63,9 +72,8 @@ public class BatchListener {
         container.setBatchListener(true);
         return container;
     }
-
     //监听事件，Mysql入库
-    @KafkaListener(id = "batch1", clientIdPrefix = "batch1", topics = "#{'${topic}'.split(',')}", containerFactory = "batchContainerFactory")
+    @KafkaListener(id = "batch1", clientIdPrefix = "batch1", topics = "#{'${topic}'.split(',')}", containerFactory = "batchContainerFactory1")
     public void batchListener1(List<String> data) {
         for (String s:data
              ) {
@@ -73,7 +81,7 @@ public class BatchListener {
         }
     }
     //监听事件，ES入库
-    @KafkaListener(id = "batch2", clientIdPrefix = "batch2", topics = "#{'${topic}'.split(',')}", containerFactory = "batchContainerFactory")
+    @KafkaListener(id = "batch2", clientIdPrefix = "batch2", topics = "#{'${topic}'.split(',')}", containerFactory = "batchContainerFactory2")
     public void batchListener2(List<String> data) {
         for (String s:data
         ) {

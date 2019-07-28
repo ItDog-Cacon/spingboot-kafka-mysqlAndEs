@@ -46,7 +46,7 @@ public class PostController {
         try {
             // TODO: 2019/7/15 根据业务
             String topic = intFid;
-//            yjzhService.insertKafka(topic, postStr);
+            yjzhService.insertKafka(topic, postStr);
             result.setErrorCode("0");
             result.setErrorMsg("success");
         }catch (Exception e){
