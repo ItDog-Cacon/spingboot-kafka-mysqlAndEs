@@ -45,17 +45,18 @@ public class ComsumerServiceImpl implements ConsumerService {
     private BsUserMapper bsUserMapper;
     @Resource
     private BsWarningBusinessMapper bsWarningBusinessMapper;
+
     @Override
     public JsonData getData(String data) {
         /**
-          * @param data :
+         * @param data :
          * @describe
          * @return com.byzoro.yjzhdatastorage.pojo.JsonData
          * @auther: xiaopang
          * @date: 7/24/2019 11:45 AM
          */
         JsonData result = null;
-        if(StringUtil.checkData(data)){
+        if (StringUtil.checkData(data)) {
             result = StringUtil.getResult(data);
             insertData(result);
         }
@@ -64,8 +65,8 @@ public class ComsumerServiceImpl implements ConsumerService {
 
     /**
      * @param jsonData :
-     * @describe 根据topic判断插入数据库接口
      * @return void
+     * @describe 根据topic判断插入数据库接口
      * @auther: xiaopang
      * @date: 7/24/2019 11:42 AM
      */
@@ -75,7 +76,7 @@ public class ComsumerServiceImpl implements ConsumerService {
         String data = jsonData.getData();
         JSONObject jsonObject = JSONObject.parseObject(data);
         String timeStamp = null;
-        if (jsonObject.get("timeStamp") !=null){
+        if (jsonObject.get("timeStamp") != null) {
             timeStamp = jsonObject.get("timeStamp").toString();
         }
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
@@ -87,14 +88,14 @@ public class ComsumerServiceImpl implements ConsumerService {
 //        Date parse = null;
         String format = null;
         try {
-             date = sdf.parse(timeStamp);
-             format = sdf1.format(date);
+            date = sdf.parse(timeStamp);
+            format = sdf1.format(date);
 //             parse = sdf1.parse(format);
         } catch (ParseException e) {
             e.printStackTrace();
         }
         IntfId emum = IntfId.fromTypeName(intfId);
-        switch (emum){
+        switch (emum) {
             // TODO: 7/21/2019 节点运行状态51 bs_node_status
             case BsNodeStatusTopic:
                 try {
@@ -103,7 +104,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                     e.printStackTrace();
                 }
                 jsonResolve.setDate(format);
-                bsNodeStatusMapper.insertData(jsonData,jsonResolve);
+                bsNodeStatusMapper.insertData(jsonData, jsonResolve);
                 break;
             // TODO: 7/21/2019 递归节点强制域名统计上报52 bs_force_resolve
             case BsForceResolveTopic:
@@ -114,7 +115,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 }
                 jsonResolve.setDate(format);
                 jsonResolve.setStatListString(jsonResolve.getStatList().toString());
-                bsForceResolveMapper.insertData(jsonData,jsonResolve);
+                bsForceResolveMapper.insertData(jsonData, jsonResolve);
                 break;
             // TODO: 7/21/2019 递归节点缓存测53 bs_cache
             case BsCacheTopic:
@@ -125,7 +126,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 }
                 jsonResolve.setDate(format);
                 jsonResolve.setTldListString(jsonResolve.getTldList().toString());
-                bsCacheMapper.insertData(jsonResolve,jsonData);
+                bsCacheMapper.insertData(jsonResolve, jsonData);
                 break;
             // TODO: 7/21/2019 递归节点迭代侧 54 bs_iterationt
             case BsIterationtTopic:
@@ -137,7 +138,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 jsonResolve.setDate(format);
                 jsonResolve.setTldListString(jsonResolve.getTldList().toString());
                 jsonResolve.setRootListString(jsonResolve.getRootList().toString());
-                bsIterationMapper.insertData(jsonResolve,jsonData);
+                bsIterationMapper.insertData(jsonResolve, jsonData);
                 break;
             // TODO: 7/20/2019 主动监测节点上报55 bs_initiative_node
             case BsInitiativeNodeTopic:
@@ -149,7 +150,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 jsonResolve.setDate(format);
                 jsonResolve.setMonListString(jsonResolve.getMonList().toString());
                 jsonResolve.setTestStatString(jsonResolve.getTestStat().toString());
-                bsInitiativeNodeMapper.insertData(jsonData,jsonResolve);
+                bsInitiativeNodeMapper.insertData(jsonData, jsonResolve);
                 break;
             // TODO: 7/20/2019 被动监测节点56 bs_passive_node
             case BsPassiveNodeTopic:
@@ -161,7 +162,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 jsonResolve.setDate(format);
                 jsonResolve.setMonListString(jsonResolve.getMonList().toString());
                 jsonResolve.setDataStatString(jsonResolve.getDataStat().toString());
-                bsPassiveNodeMapper.insertData(jsonData,jsonResolve);
+                bsPassiveNodeMapper.insertData(jsonData, jsonResolve);
                 break;
             // TODO: 7/20/2019 信息提取节点57 bs_information_extract
             case BsInformationExtractTopic:
@@ -172,7 +173,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 }
                 jsonResolve.setDate(format);
                 jsonResolve.setDataStatString(jsonResolve.getDataStat().toString());
-                bsInformationExtractMapper.insertData(jsonData,jsonResolve);
+                bsInformationExtractMapper.insertData(jsonData, jsonResolve);
                 break;
             // TODO: 7/20/2019 多源采集节点 58 bs_multi_collect_node
             case BsMultiCollectNodeTopic:
@@ -183,7 +184,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 }
                 jsonResolve.setDate(format);
                 jsonResolve.setDataStatString(jsonResolve.getDataStat().toString());
-                bsMultiCollectNodeMapper.insertData(jsonData,jsonResolve);
+                bsMultiCollectNodeMapper.insertData(jsonData, jsonResolve);
                 break;
             // TODO: 7/20/2019 数据节点统计上报59 bs_database_node
             case BsDatabaseNodeTopic:
@@ -194,7 +195,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 }
                 jsonResolve.setDate(format);
                 jsonResolve.setStatListString(jsonResolve.getStatList().toString());
-                bsDatabaseNodeMapper.insertData(jsonData,jsonResolve);
+                bsDatabaseNodeMapper.insertData(jsonData, jsonResolve);
                 break;
             // TODO: 7/20/2019 应急响应节点上报60 bs_emergency_node
             case BsEmergencyNodeTopic:
@@ -205,7 +206,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 }
                 jsonResolve.setDate(format);
                 jsonResolve.setResStatString(jsonResolve.getResStat().toString());
-                bsEmergencyNodeMapper.insertData(jsonData,jsonResolve);
+                bsEmergencyNodeMapper.insertData(jsonData, jsonResolve);
                 break;
             // TODO: 7/21/2019 61 预警分析节点上报 bs_warning_business
             case BsWaringBusinessTopic:
@@ -216,7 +217,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 }
                 jsonResolve.setDate(format);
                 jsonResolve.setStatListString(jsonResolve.getStatList().toString());
-                bsWarningBusinessMapper.insertData(jsonData,jsonResolve);
+                bsWarningBusinessMapper.insertData(jsonData, jsonResolve);
                 break;
             // TODO: 7/21/2019 用户侧域名解析排行62 bs_user
             case BsUserTopic:
@@ -227,7 +228,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 }
                 jsonResolve.setDate(format);
                 jsonResolve.setStatListString(jsonResolve.getStatList().toString());
-                bsUserMapper.insertData(jsonData,jsonResolve);
+                bsUserMapper.insertData(jsonData, jsonResolve);
                 break;
 
             // TODO: 7/20/2019 递归节点递归侧顶级域名解析 63 bs_recursive_dr
@@ -239,7 +240,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 }
                 jsonResolve.setDate(format);
                 jsonResolve.setStatListString(jsonResolve.getStatList().toString());
-                bsRecursiveDrMapper.insertData(jsonData,jsonResolve);
+                bsRecursiveDrMapper.insertData(jsonData, jsonResolve);
                 break;
             // TODO: 7/21/2019 递归节点迭代侧顶级域名解析64 bs_iteration_dr
             case BsIterationDrTopic:
@@ -250,7 +251,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 }
                 jsonResolve.setDate(format);
                 jsonResolve.setStatListString(jsonResolve.getStatList().toString());
-                bsIterationDrMapper.insertData(jsonData,jsonResolve);
+                bsIterationDrMapper.insertData(jsonData, jsonResolve);
                 break;
         }
     }
