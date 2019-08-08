@@ -18,9 +18,9 @@ public class testTest {
 
     @Test
     public void getPass() {
-        String url = encryptor.encrypt("jdbc:mysql://10.83.120.102:3306/kmh?serverTimezone=UTC&characterEncoding=utf-8");
+        String url = encryptor.encrypt("jdbc:mysql://10.83.120.103:3306/yjzh?serverTimezone=UTC&characterEncoding=utf-8");
         String name = encryptor.encrypt("root");
-        String password = encryptor.encrypt("Byzoro@12#$");
+        String password = encryptor.encrypt("root");
         System.out.println(url+"----------------");
         System.out.println(name+"----------------");
         System.out.println(password+"----------------");

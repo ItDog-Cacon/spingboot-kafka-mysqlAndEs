@@ -39,12 +39,14 @@ public class EsDataImpl implements ConsumerService {
         String subsysId = jsonData.getSubsysId();
         String orgId = jsonData.getOrgId();
         String data = jsonData.getData();
+        String dataTag = jsonData.getDataTag();
 
         JSONObject esJsonObject = new JSONObject();
         JSONObject headJsonObject = new JSONObject();
         headJsonObject.put("orgId",intfId);
         headJsonObject.put("subsysId",subsysId);
         headJsonObject.put("intfId",orgId);
+        headJsonObject.put("dataTag",dataTag);
         JSONObject bodyJsonObject = JSONObject.parseObject(data);
         //System.out.println("hello body: "+bodyJsonObject);
         esJsonObject.putAll(headJsonObject);

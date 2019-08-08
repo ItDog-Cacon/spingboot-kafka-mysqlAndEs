@@ -1,10 +1,11 @@
 package com.byzoro.yjzhdatastorage.entity;
 
 import com.alibaba.fastjson.JSONObject;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import java.util.Date;
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class JsonResolve {
     private String nodeId;
 

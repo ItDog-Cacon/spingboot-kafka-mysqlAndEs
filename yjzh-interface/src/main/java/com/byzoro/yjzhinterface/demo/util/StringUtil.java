@@ -200,7 +200,7 @@ public class StringUtil {
      *@Author:xiaopang
      *@Date:2019/7/15
      */
-    public static Boolean checkData(String json) {
+    public static Boolean checkPwdHash(String json) {
         System.out.println(json);
         Boolean flag = false;
         JSONObject jsonObject = JSONObject.parseObject(json);
@@ -249,6 +249,52 @@ public class StringUtil {
         String hashString = HashUtil.getHashString(s, algorithm);
         String checkPwd = BASE64Util.encode(hashString);
         if(checkPwd.equals(pwdHash)) {
+            return flag=true;
+        }
+        return flag;
+    }
+
+    /**
+     *@Description: 对数据进行解码校验
+     *@Param:[json]
+     *@return:java.lang.Boolean
+     *@Author:xiaopang
+     *@Date:2019/7/15
+     */
+    public static Boolean checkDataHash(String json) {
+        Boolean flag = false;
+        JSONObject jsonObject = JSONObject.parseObject(json);
+        String data = null;
+        String dataHash = null;
+        String hashMode = null;
+        String algorithm = null;
+        if (jsonObject.get("data") != null) {
+            data = jsonObject.get("data").toString();
+        }
+        if (jsonObject.get("dataHash") != null) {
+            dataHash = jsonObject.get("dataHash").toString();
+        }
+        if(jsonObject.get("hashMode") !=null) {
+            hashMode = jsonObject.get("hashMode").toString();
+        }
+        switch (hashMode){
+            case "0":
+                algorithm = null;
+                break;
+            case "1":
+                algorithm = "MD5";
+                break;
+            case "2":
+                algorithm = "SHA-1";
+                break;
+            case "3":
+                algorithm = "SHA-256";
+                break;
+            case "11":
+                algorithm = "SM3";
+                break;
+        }
+        String authKey = config.getAuthKey();
             // TODO: 7/18/2019 数据转换解base64数据
             byte[] bytes1 = BASE64Util.decodeByte(data);
             // TODO: 7/18/2019 将消息认证字符串数据转为bytes
@@ -262,7 +308,6 @@ public class StringUtil {
             if (encode.equals(dataHash)) {
                 flag = true;
             }
-        }
         return flag;
     }
 
@@ -276,9 +321,13 @@ public class StringUtil {
     public static JsonData getResult(String postStr){
         JSONObject jsonObject = JSONObject.parseObject(postStr);
         String data = null;
+        String compressMode = null;
         // TODO: 7/16/2019 获取数据中data
         if (jsonObject.get("data") !=null) {
             data = jsonObject.get("data").toString();
+        }
+        if(jsonObject.get("compressMode") !=null){
+            compressMode = jsonObject.get("compressMode").toString();
         }
         JsonData jsonData = null;
         try {
@@ -286,13 +335,14 @@ public class StringUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        // TODO: 7/16/2019 对数据解密base64
-//        byte[] bytes = BASE64Util.decodeByte(data);
-//        // TODO: 7/16/2019 解压数据
-//        String s = CompressUtil.unZlib(bytes);
-        String unZlib = CompressUtil.dataZlib(data);
-        jsonData.setData(unZlib);
-        System.err.println(jsonData);
+        if ( compressMode.equals("1")) {
+            String unZlib = CompressUtil.dataZlib(data);
+            jsonData.setData(unZlib);
+            System.err.println(jsonData);
+        }else{
+            String decode = BASE64Util.decode(data);
+            jsonData.setData(decode);
+        }
         return jsonData;
     }
 

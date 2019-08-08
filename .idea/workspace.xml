@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d04c4b1d-b888-4153-8f83-df92ab150aa9" name="Default Changelist" comment="">
+    <list default="true" id="d04c4b1d-b888-4153-8f83-df92ab150aa9" name="Default Changelist" comment="7.29修改代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-common/target/classes/utils/BASE64Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-common/target/classes/utils/BASE64Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-common/target/classes/utils/CompressUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-common/target/classes/utils/CompressUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-common/target/classes/utils/EncryptUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-common/target/classes/utils/EncryptUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-common/target/classes/utils/HashUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-common/target/classes/utils/HashUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-common/target/classes/utils/JSONUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-common/target/classes/utils/JSONUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/JsonResolve.java" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/JsonResolve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/StatList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/pojo/JsonData.java" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/pojo/JsonData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/esImpl/EsDataImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/esImpl/EsDataImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/esImpl/EsDataUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/esImpl/EsDataUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/impl/ComsumerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/impl/ComsumerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/testTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/testTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-data-storage/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-data-storage/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/ProducerKafka.java" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/ProducerKafka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/util/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yjzh-interface/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/yjzh-interface/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/yjzh-common/target/" />
     <ignored path="$PROJECT_DIR$/yjzh-interface/target/" />
@@ -30,15 +49,104 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/impl/ComsumerServiceImpl.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/controller/PostController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="788">
-              <caret line="94" column="32" lean-forward="true" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+            <state relative-caret-position="-180">
+              <caret line="3" selection-start-line="2" selection-end-line="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/service/YjzhService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/service/impl/YjzhServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#834#835#0" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/ProducerKafka.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/YjzhDataStorageApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/Properties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4590">
+              <caret line="194" column="62" selection-start-line="194" selection-start-column="62" selection-end-line="194" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/testTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="35" selection-start-column="35" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/YjzhInterfaceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -78,12 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/pojo/BsForceResolve.java" />
-        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/pojo/JsonData.java" />
-        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/dao/BsNodeStatusMapper.java" />
-        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/resources/mapper/BsNodeStatusMapper.xml" />
-        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/dao/BsForceResolveMapper.java" />
-        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/resources/mapper/BsForceResolveMapper.xml" />
         <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/dao/BsCacheMapper.java" />
         <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/resources/mapper/BsCacheMapper.xml" />
         <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/dao/BsIterationMapper.java" />
@@ -110,25 +212,31 @@
         <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/resources/mapper/BsWarningBusinessMapper.xml" />
         <option value="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/service/YjzhService.java" />
         <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/Config.java" />
-        <option value="$PROJECT_DIR$/yjzh-interface/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/Config.java" />
         <option value="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/JsonData.java" />
-        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/JsonResolve.java" />
-        <option value="$PROJECT_DIR$/yjzh-common/src/main/java/utils/CompressUtil.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/StringUtil.java" />
-        <option value="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/util/StringUtil.java" />
         <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/esImpl/EsDataUtils.java" />
         <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/Data.java" />
         <option value="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/Data.java" />
-        <option value="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/ProducerKafka.java" />
-        <option value="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/controller/PostController.java" />
         <option value="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/service/impl/YjzhServiceImpl.java" />
         <option value="$PROJECT_DIR$/yjzh-data-storage/pom.xml" />
-        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/testTest.java" />
-        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/BatchListener.java" />
         <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/impl/ComsumerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/pojo/JsonData.java" />
+        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/JsonResolve.java" />
+        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/yjzh-common/src/main/java/utils/CompressUtil.java" />
+        <option value="$PROJECT_DIR$/yjzh-common/src/main/java/entity/IntfId.java" />
+        <option value="$PROJECT_DIR$/yjzh-common/src/main/java/entity/JsonData.java" />
+        <option value="$PROJECT_DIR$/yjzh-common/src/main/java/utils/StringUtil.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/yjzh-common/pom.xml" />
+        <option value="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/util/StringUtil.java" />
+        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/StringUtil.java" />
+        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/yjzh-interface/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/ProducerKafka.java" />
+        <option value="$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/testTest.java" />
+        <option value="$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/controller/PostController.java" />
       </list>
     </option>
   </component>
@@ -157,6 +265,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -199,32 +308,10 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="yjzhdatastorage" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="yjzh-data-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yjzhdatastorage" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="analysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="analysis" type="462c0819:PsiDirectoryNode" />
-              <item name="yjzh-data-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="yjzhdatastorage" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -235,26 +322,29 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564313159248" />
-    <property name="last_opened_file_path" value="D:/smart_city" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565234751347" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../docker" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utils" />
+      <recent name="entity" />
       <recent name="com.byzoro.yjzhinterface.demo.pojo" />
       <recent name="com.byzoro.yjzhinterface.demo.util" />
-      <recent name="utils" />
       <recent name="com.byzoro.yjzhdatastorage.util" />
-      <recent name="com.byzoro.yjzhdatastorage.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="K:\code\yjzh-analysis\analysis\yjzh-common\src\main\java\entity" />
       <recent name="K:\code\yjzh-analysis\analysis\yjzh-data-storage\src\main\java\com\byzoro\yjzhdatastorage\util" />
       <recent name="K:\yjzh-analysis\analysis\yjzh-common\src\main\java\utils" />
       <recent name="K:\yjzh-analysis\analysis\yjzh-data-storage\src\main\java\com\byzoro\yjzhdatastorage\dao" />
       <recent name="K:\yjzh-analysis\analysis\yjzh-data-storage\src\main\resources\mapper" />
-      <recent name="K:\yjzh-analysis\analysis\yjzh-data-storage\src\main\java\com\byzoro\yjzhdatastorage\pojo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -283,6 +373,22 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yjzh-data-storage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.byzoro.yjzhdatastorage.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.byzoro.yjzhdatastorage.util" />
+      <option name="MAIN_CLASS_NAME" value="com.byzoro.yjzhdatastorage.util.testTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -341,12 +447,14 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.testTest.getPass" />
+      <item itemvalue="JUnit.testTest" />
       <item itemvalue="Spring Boot.YjzhDataStorageApplication" />
       <item itemvalue="Spring Boot.YjzhInterfaceApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.testTest.getPass" />
+        <item itemvalue="JUnit.testTest" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +478,22 @@
       <workItem from="1564123043024" duration="26969000" />
       <workItem from="1564285302073" duration="12677000" />
       <workItem from="1564361039750" duration="5220000" />
+      <workItem from="1564386836726" duration="2558000" />
+      <workItem from="1564390167280" duration="8081000" />
+      <workItem from="1564451317307" duration="11076000" />
+      <workItem from="1564534436131" duration="28045000" />
+      <workItem from="1564881945376" duration="49000" />
+      <workItem from="1564984514530" duration="19171000" />
+      <workItem from="1565228848908" duration="1529000" />
     </task>
+    <task id="LOCAL-00001" summary="7.29修改代码">
+      <created>1564386908927</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564386908927</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -380,9 +503,27 @@
     <history-entry file="testTest_getPass - 2019.07.28 at 15h 43m 19s.xml">
       <configuration name="testTest.getPass" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="testTest - 2019.07.31 at 16h 19m 11s.xml">
+      <configuration name="testTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testTest_getPass - 2019.07.31 at 17h 16m 51s.xml">
+      <configuration name="testTest.getPass" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testTest - 2019.08.05 at 13h 58m 43s.xml">
+      <configuration name="testTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testTest_getPass - 2019.08.05 at 14h 13m 12s.xml">
+      <configuration name="testTest.getPass" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testTest - 2019.08.06 at 09h 24m 17s.xml">
+      <configuration name="testTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testTest_getPass - 2019.08.07 at 17h 13m 19s.xml">
+      <configuration name="testTest.getPass" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201682000" />
+    <option name="totallyTimeSpent" value="272191000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -397,7 +538,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3100304" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1588146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -407,23 +548,23 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5564924" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.064080946" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.3288364" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.1989882" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3298611" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.2900506" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32715008" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3288364" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.69814503" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.5277778" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.6340641" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.06382979" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3913374" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
@@ -470,205 +611,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="7.29修改代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="7.29修改代码" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/resources/mapper/BsEmergencyNodeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/dao/BsIterationDrMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/resources/mapper/BsIterationDrMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4830">
-          <caret line="161" column="16" selection-start-line="161" selection-start-column="16" selection-end-line="161" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/pojo/BsUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/dao/BsUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/dao/BsRecursiveDrMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/pojo/BsRecursiveDr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/dao/BsWarningBusinessMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/resources/mapper/BsWarningBusinessMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4230">
-          <caret line="141" column="2" selection-start-line="141" selection-start-column="2" selection-end-line="141" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/dao/BsPassiveNodeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/resources/mapper/BsPassiveNodeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4920">
-          <caret line="164" column="2" selection-start-line="164" selection-start-column="2" selection-end-line="164" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/YjzhInterfaceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/resources/mapper/BsRecursiveDrMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4680">
-          <caret line="156" column="41" selection-start-line="156" selection-start-column="41" selection-end-line="156" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/resources/mapper/BsUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4800">
-          <caret line="160" column="113" selection-start-line="160" selection-start-column="113" selection-end-line="160" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-interface/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="88" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.0.1/kafka-clients-2.0.1.jar!/org/apache/kafka/clients/admin/NewTopic.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/kafka/spring-kafka/2.2.7.RELEASE/spring-kafka-2.2.7.RELEASE.jar!/org/springframework/kafka/annotation/KafkaListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.0.1/kafka-clients-2.0.1.jar!/org/apache/kafka/clients/consumer/ConsumerConfig.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-common/src/main/java/utils/BASE64Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-745">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-common/src/main/java/utils/HashUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-906">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/IntfId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="1137" selection-start-line="1137" selection-end-line="1137" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-common/src/main/java/utils/JSONUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#584#602#1" expanded="true" />
-            <element signature="e#651#664#1" expanded="true" />
-            <element signature="e#697#709#1" expanded="true" />
-            <element signature="e#1975#1976#0" expanded="true" />
-            <element signature="e#2001#2002#0" expanded="true" />
-            <element signature="e#2039#2040#0" expanded="true" />
-            <element signature="e#2069#2070#0" expanded="true" />
-            <element signature="e#2103#2104#0" expanded="true" />
-            <element signature="e#2133#2134#0" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2217#2218#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/dao/BsCacheMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -687,30 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="199" column="2" selection-start-line="199" selection-start-column="2" selection-end-line="199" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/JsonResolve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-common/src/main/java/utils/CompressUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" selection-start-line="3" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -741,20 +664,59 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/Data.java" />
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/controller/Controller.java">
+    <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/Result.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/ProducerKafka.java">
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/pojo/BsCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/esImpl/EsMappingDef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/esImpl/EsBulk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-common/src/main/java/utils/EncryptUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-384">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/StartupRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-common/src/main/java/utils/HashUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-649">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -765,25 +727,185 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/Result.java">
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/JsonResolve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-common/src/main/java/entity/JsonResolve.java" />
+    <entry file="file://$PROJECT_DIR$/yjzh-common/src/main/java/utils/StringUtil.java" />
+    <entry file="file://$PROJECT_DIR$/yjzh-common/src/main/java/entity/JsonData.java" />
+    <entry file="file://$PROJECT_DIR$/yjzh-common/src/main/java/entity/IntfId.java" />
+    <entry file="file://$PROJECT_DIR$/yjzh-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="81" column="8" selection-start-line="81" selection-start-column="8" selection-end-line="85" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-common/src/main/java/utils/CompressUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="100" column="47" selection-start-line="100" selection-start-column="47" selection-end-line="100" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2017#2018#0" expanded="true" />
+            <element signature="e#2069#2070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/pojo/JsonData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-common/src/main/java/utils/BASE64Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-640">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/dao/BsIterationMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/resources/mapper/BsIterationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5310">
+          <caret line="177" column="2" selection-start-line="177" selection-start-column="2" selection-end-line="177" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/dao/BsUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/resources/mapper/BsUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4680">
+          <caret line="156" column="41" selection-start-line="156" selection-start-column="41" selection-end-line="156" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/IntfId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+          <folding>
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/entity/StatList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/impl/ComsumerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10" />
+        <state relative-caret-position="138">
+          <caret line="133" selection-start-line="132" selection-end-line="133" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/util/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3182">
-          <caret line="275" column="27" selection-start-line="275" selection-start-column="27" selection-end-line="275" selection-end-column="27" />
+        <state relative-caret-position="-1502">
+          <caret line="202" column="26" selection-start-line="202" selection-start-column="26" selection-end-line="202" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/StringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="112" column="12" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/BatchListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1740">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.0.1/kafka-clients-2.0.1.jar!/org/apache/kafka/clients/producer/Producer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-172">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.0.1/kafka-clients-2.0.1.jar!/org/apache/kafka/clients/producer/KafkaProducer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="103" column="11" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -796,8 +918,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/service/impl/YjzhServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        <state relative-caret-position="630">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#834#835#0" expanded="true" />
@@ -806,45 +928,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/StringUtil.java">
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/Properties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="293" column="33" lean-forward="true" selection-start-line="293" selection-start-column="33" selection-end-line="293" selection-end-column="33" />
+        <state relative-caret-position="4590">
+          <caret line="194" column="62" selection-start-line="194" selection-start-column="62" selection-end-line="194" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/BatchListener.java">
+    <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2260">
-          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3180">
-          <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+        <state relative-caret-position="360">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/util/testTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/YjzhInterfaceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-data-web/src/main/java/com/byzoro/sendmsg/YjzhInterfaceApplication.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/controller/PostController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="-180">
+          <caret line="3" selection-start-line="2" selection-end-line="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yjzh-interface/src/main/java/com/byzoro/yjzhinterface/demo/pojo/ProducerKafka.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -854,33 +989,88 @@
     <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/YjzhDataStorageApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/pojo/BsCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yjzh-data-storage/src/main/java/com/byzoro/yjzhdatastorage/service/impl/ComsumerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="788">
-          <caret line="94" column="32" lean-forward="true" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>yjzh-common</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

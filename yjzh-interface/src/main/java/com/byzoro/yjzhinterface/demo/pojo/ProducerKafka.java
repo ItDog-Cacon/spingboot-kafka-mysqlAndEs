@@ -66,6 +66,7 @@ public class ProducerKafka {
         properties.put("buffer.memory",config.getBufferMemory());
         properties.put("key.serializer",config.getKeySerializer());
         properties.put("value.serializer",config.getValueSerializer());
+
         return properties;
     }
 }

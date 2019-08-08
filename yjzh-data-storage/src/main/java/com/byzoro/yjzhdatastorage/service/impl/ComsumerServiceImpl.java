@@ -46,15 +46,15 @@ public class ComsumerServiceImpl implements ConsumerService {
     @Resource
     private BsWarningBusinessMapper bsWarningBusinessMapper;
 
+    /**
+     * @param data :
+     * @describe
+     * @return com.byzoro.yjzhdatastorage.pojo.JsonData
+     * @auther: xiaopang
+     * @date: 7/24/2019 11:45 AM
+     */
     @Override
     public JsonData getData(String data) {
-        /**
-         * @param data :
-         * @describe
-         * @return com.byzoro.yjzhdatastorage.pojo.JsonData
-         * @auther: xiaopang
-         * @date: 7/24/2019 11:45 AM
-         */
         JsonData result = null;
         if (StringUtil.checkData(data)) {
             result = StringUtil.getResult(data);
@@ -219,6 +219,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 jsonResolve.setStatListString(jsonResolve.getStatList().toString());
                 bsWarningBusinessMapper.insertData(jsonData, jsonResolve);
                 break;
+
             // TODO: 7/21/2019 用户侧域名解析排行62 bs_user
             case BsUserTopic:
                 try {

@@ -276,9 +276,13 @@ public class StringUtil {
     public static JsonData getResult(String postStr){
         JSONObject jsonObject = JSONObject.parseObject(postStr);
         String data = null;
+        String compressMode = null;
         // TODO: 7/16/2019 获取数据中data
         if (jsonObject.get("data") !=null) {
             data = jsonObject.get("data").toString();
+        }
+        if(jsonObject.get("compressMode") !=null){
+            compressMode = jsonObject.get("compressMode").toString();
         }
         JsonData jsonData = null;
         try {
@@ -290,9 +294,14 @@ public class StringUtil {
 //        byte[] bytes = BASE64Util.decodeByte(data);
 //        // TODO: 7/16/2019 解压数据
 //        String s = CompressUtil.unZlib(bytes);
-        String unZlib = CompressUtil.dataZlib(data);
-        jsonData.setData(unZlib);
-        System.err.println(jsonData);
+        if ( compressMode.equals("1")) {
+            String unZlib = CompressUtil.dataZlib(data);
+            jsonData.setData(unZlib);
+            System.err.println(jsonData);
+        }else{
+           String decode = BASE64Util.decode(data);
+            jsonData.setData(decode);
+        }
         return jsonData;
     }
 

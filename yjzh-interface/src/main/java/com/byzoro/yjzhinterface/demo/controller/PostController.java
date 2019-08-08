@@ -3,6 +3,7 @@ package com.byzoro.yjzhinterface.demo.controller;
 
 import com.byzoro.yjzhinterface.demo.pojo.Result;
 import com.byzoro.yjzhinterface.demo.service.YjzhService;
+import com.byzoro.yjzhinterface.demo.util.StringUtil;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,24 +39,36 @@ public class PostController {
                           @RequestBody String postStr
                           ) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-        sdf.setTimeZone(TimeZone.getTimeZone("Europe/London"));
+        sdf.setTimeZone(TimeZone.getTimeZone("GMT+0"));
         String format = sdf.format(new Date());
-        System.out.println(postStr);
+        System.err.println(postStr);
         Result result = new Result();
         result.setTimeStamp(format);
+
         try {
             // TODO: 2019/7/15 根据业务
             String topic = intFid;
-            yjzhService.insertKafka(topic, postStr);
-            result.setErrorCode("0");
-            result.setErrorMsg("success");
+            Boolean checkPwdHash = StringUtil.checkPwdHash(postStr);
+            System.out.println(checkPwdHash+"-------checkPwdHash---------");
+            if(checkPwdHash){
+                Boolean checkDataHash = StringUtil.checkDataHash(postStr);
+                System.out.println(checkDataHash+"-------checkDataHash---------");
+                if(checkDataHash){
+                    yjzhService.insertKafka(topic, postStr);
+                    result.setErrorCode("0");
+                    result.setErrorMsg("success");
+                }else{
+                    result.setErrorCode("3");
+                    result.setErrorMsg("校验失败");
+                }
+            }else{
+                result.setErrorCode("2");
+                result.setErrorMsg("认证失败");
+            }
         }catch (Exception e){
             result.setErrorCode("1");
             result.setErrorMsg("fail");
         }
-//        Boolean aBoolean = StringUtil.checkData(postStr);
-//        System.out.println(aBoolean);
-//        System.out.println(StringUtil.getResult(postStr));
         return result;
     }
 }

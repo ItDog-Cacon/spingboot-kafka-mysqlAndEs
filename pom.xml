@@ -12,6 +12,7 @@
         <module>yjzh-interface</module>
         <module>yjzh-data-storage</module>
         <module>yjzh-common</module>
+        <module>yjzh-data-web</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
