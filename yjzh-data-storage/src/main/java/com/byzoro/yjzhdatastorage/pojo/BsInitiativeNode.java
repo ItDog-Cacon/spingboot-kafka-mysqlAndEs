@@ -25,6 +25,16 @@ public class BsInitiativeNode {
 
     private String dataTag;
 
+    private String nsList;
+
+    public String getNsList() {
+        return nsList;
+    }
+
+    public void setNsList(String nsList) {
+        this.nsList = nsList;
+    }
+
     public Integer getId() {
         return id;
     }

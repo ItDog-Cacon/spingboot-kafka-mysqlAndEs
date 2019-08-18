@@ -14,6 +14,7 @@ import javax.annotation.Resource;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 @Service
 public class ComsumerServiceImpl implements ConsumerService {
@@ -80,17 +81,15 @@ public class ComsumerServiceImpl implements ConsumerService {
             timeStamp = jsonObject.get("timeStamp").toString();
         }
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-//        sdf.setTimeZone(TimeZone.getTimeZone("Europe/London"));
+        sdf.setTimeZone(TimeZone.getTimeZone("GMT+0"));
         SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        sdf1.setTimeZone(TimeZone.getTimeZone("Europe/London"));
+        sdf1.setTimeZone(TimeZone.getTimeZone("GMT+8"));
         JsonResolve jsonResolve = null;
         Date date = null;
-//        Date parse = null;
         String format = null;
         try {
             date = sdf.parse(timeStamp);
             format = sdf1.format(date);
-//             parse = sdf1.parse(format);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -150,6 +149,7 @@ public class ComsumerServiceImpl implements ConsumerService {
                 jsonResolve.setDate(format);
                 jsonResolve.setMonListString(jsonResolve.getMonList().toString());
                 jsonResolve.setTestStatString(jsonResolve.getTestStat().toString());
+                jsonResolve.setNsListString(jsonResolve.getNsList().toString());
                 bsInitiativeNodeMapper.insertData(jsonData, jsonResolve);
                 break;
             // TODO: 7/20/2019 被动监测节点56 bs_passive_node

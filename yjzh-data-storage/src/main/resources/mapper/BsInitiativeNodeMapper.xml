@@ -13,164 +13,18 @@
     <result column="stat_period" property="statPeriod" jdbcType="VARCHAR" />
     <result column="time_stamp" property="timeStamp" jdbcType="TIMESTAMP" />
     <result column="data_tag" property="dataTag" jdbcType="CHAR" />
+    <result column="ns_list" property="nsList" jdbcType="CHAR" />
   </resultMap>
-  <sql id="Base_Column_List" >
-    id, node_id, org_id, subsys_id, intf_id, mon_list, test_stat, domain_check_num, stat_period, 
-    time_stamp, data_tag
-  </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    from bs_initiative_node
-    where id = #{id,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from bs_initiative_node
-    where id = #{id,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="com.byzoro.yjzhdatastorage.pojo.BsInitiativeNode" >
-    insert into bs_initiative_node (id, node_id, org_id, 
-      subsys_id, intf_id, mon_list, test_stat, 
-      domain_check_num, stat_period, time_stamp, 
-      data_tag)
-    values (#{id,jdbcType=INTEGER}, #{nodeId,jdbcType=VARCHAR}, #{orgId,jdbcType=CHAR}, 
-      #{subsysId,jdbcType=CHAR}, #{intfId,jdbcType=CHAR}, #{monList,jdbcType=CHAR}, #{testStat,jdbcType=CHAR}, 
-      #{domainCheckNum,jdbcType=BIGINT}, #{statPeriod,jdbcType=VARCHAR}, #{timeStamp,jdbcType=TIMESTAMP}, 
-      #{dataTag,jdbcType=CHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.byzoro.yjzhdatastorage.pojo.BsInitiativeNode" >
-    insert into bs_initiative_node
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="nodeId != null" >
-        node_id,
-      </if>
-      <if test="orgId != null" >
-        org_id,
-      </if>
-      <if test="subsysId != null" >
-        subsys_id,
-      </if>
-      <if test="intfId != null" >
-        intf_id,
-      </if>
-      <if test="monList != null" >
-        mon_list,
-      </if>
-      <if test="testStat != null" >
-        test_stat,
-      </if>
-      <if test="domainCheckNum != null" >
-        domain_check_num,
-      </if>
-      <if test="statPeriod != null" >
-        stat_period,
-      </if>
-      <if test="timeStamp != null" >
-        time_stamp,
-      </if>
-      <if test="dataTag != null" >
-        data_tag,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=INTEGER},
-      </if>
-      <if test="nodeId != null" >
-        #{nodeId,jdbcType=VARCHAR},
-      </if>
-      <if test="orgId != null" >
-        #{orgId,jdbcType=CHAR},
-      </if>
-      <if test="subsysId != null" >
-        #{subsysId,jdbcType=CHAR},
-      </if>
-      <if test="intfId != null" >
-        #{intfId,jdbcType=CHAR},
-      </if>
-      <if test="monList != null" >
-        #{monList,jdbcType=CHAR},
-      </if>
-      <if test="testStat != null" >
-        #{testStat,jdbcType=CHAR},
-      </if>
-      <if test="domainCheckNum != null" >
-        #{domainCheckNum,jdbcType=BIGINT},
-      </if>
-      <if test="statPeriod != null" >
-        #{statPeriod,jdbcType=VARCHAR},
-      </if>
-      <if test="timeStamp != null" >
-        #{timeStamp,jdbcType=TIMESTAMP},
-      </if>
-      <if test="dataTag != null" >
-        #{dataTag,jdbcType=CHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.byzoro.yjzhdatastorage.pojo.BsInitiativeNode" >
-    update bs_initiative_node
-    <set >
-      <if test="nodeId != null" >
-        node_id = #{nodeId,jdbcType=VARCHAR},
-      </if>
-      <if test="orgId != null" >
-        org_id = #{orgId,jdbcType=CHAR},
-      </if>
-      <if test="subsysId != null" >
-        subsys_id = #{subsysId,jdbcType=CHAR},
-      </if>
-      <if test="intfId != null" >
-        intf_id = #{intfId,jdbcType=CHAR},
-      </if>
-      <if test="monList != null" >
-        mon_list = #{monList,jdbcType=CHAR},
-      </if>
-      <if test="testStat != null" >
-        test_stat = #{testStat,jdbcType=CHAR},
-      </if>
-      <if test="domainCheckNum != null" >
-        domain_check_num = #{domainCheckNum,jdbcType=BIGINT},
-      </if>
-      <if test="statPeriod != null" >
-        stat_period = #{statPeriod,jdbcType=VARCHAR},
-      </if>
-      <if test="timeStamp != null" >
-        time_stamp = #{timeStamp,jdbcType=TIMESTAMP},
-      </if>
-      <if test="dataTag != null" >
-        data_tag = #{dataTag,jdbcType=CHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.byzoro.yjzhdatastorage.pojo.BsInitiativeNode" >
-    update bs_initiative_node
-    set node_id = #{nodeId,jdbcType=VARCHAR},
-      org_id = #{orgId,jdbcType=CHAR},
-      subsys_id = #{subsysId,jdbcType=CHAR},
-      intf_id = #{intfId,jdbcType=CHAR},
-      mon_list = #{monList,jdbcType=CHAR},
-      test_stat = #{testStat,jdbcType=CHAR},
-      domain_check_num = #{domainCheckNum,jdbcType=BIGINT},
-      stat_period = #{statPeriod,jdbcType=VARCHAR},
-      time_stamp = #{timeStamp,jdbcType=TIMESTAMP},
-      data_tag = #{dataTag,jdbcType=CHAR}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
 
   <insert id="insertData">
     insert into bs_initiative_node (node_id, org_id,
       subsys_id, intf_id, mon_list, test_stat,
       domain_check_num, stat_period, time_stamp,
-      data_tag)
+      data_tag,ns_list)
     values (#{jsonResolve.nodeId,jdbcType=VARCHAR}, #{jsonData.orgId,jdbcType=CHAR},
       #{jsonData.subsysId,jdbcType=CHAR}, #{jsonData.intfId,jdbcType=CHAR}, #{jsonResolve.monListString,jdbcType=CHAR}, #{jsonResolve.testStatString,jdbcType=CHAR},
       #{jsonResolve.domainCheckNum,jdbcType=BIGINT}, #{jsonResolve.statPeriod,jdbcType=VARCHAR}, #{jsonResolve.date,jdbcType=TIMESTAMP},
-      #{jsonData.dataTag,jdbcType=CHAR})
+      #{jsonData.dataTag,jdbcType=CHAR},#{jsonResolve.nsListString,jdbcType=CHAR})
   </insert>
 
 </mapper>

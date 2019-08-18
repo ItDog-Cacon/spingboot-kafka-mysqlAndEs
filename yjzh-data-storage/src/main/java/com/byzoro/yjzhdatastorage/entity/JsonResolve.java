@@ -43,6 +43,11 @@ public class JsonResolve {
 
     private String resStatString;
 
+    // TODO: 8/8/2019 根服务器列表
+    private List<JSONObject> nsList;
+
+    private String nsListString;
+
     private String timeStamp;
 
     private String cityId;
@@ -413,5 +418,21 @@ public class JsonResolve {
 
     public void setTldNum(Long tldNum) {
         this.tldNum = tldNum;
+    }
+
+    public List<JSONObject> getNsList() {
+        return nsList;
+    }
+
+    public void setNsList(List<JSONObject> nsList) {
+        this.nsList = nsList;
+    }
+
+    public String getNsListString() {
+        return nsListString;
+    }
+
+    public void setNsListString(String nsListString) {
+        this.nsListString = nsListString;
     }
 }
